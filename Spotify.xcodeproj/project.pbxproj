@@ -14,6 +14,9 @@
 		82D3F81C23573E9A002ABFFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D3F81A23573E9A002ABFFD /* LaunchScreen.storyboard */; };
 		82D3F835235756EA002ABFFD /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D3F834235756EA002ABFFD /* SpotifyiOS.framework */; };
 		82D3F83723575779002ABFFD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F83623575779002ABFFD /* Constants.swift */; };
+		82D3F83923576B74002ABFFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F83823576B74002ABFFD /* LoginViewController.swift */; };
+		82D3F83B23576DE1002ABFFD /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F83A23576DE1002ABFFD /* PlayListViewController.swift */; };
+		82D3F83F23577D00002ABFFD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F83E23577D00002ABFFD /* ContainerViewController.swift */; };
 		9380BA8C7670E6E5531FE184 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA59D41A03ECE78A85276FC /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		82D3F8302357562A002ABFFD /* Spotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spotify-Bridging-Header.h"; sourceTree = "<group>"; };
 		82D3F834235756EA002ABFFD /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		82D3F83623575779002ABFFD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82D3F83823576B74002ABFFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		82D3F83A23576DE1002ABFFD /* PlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
+		82D3F83E23577D00002ABFFD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A3247635A9FF525B929FD2A1 /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 		EDA59D41A03ECE78A85276FC /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +75,9 @@
 			children = (
 				82D3F81123573E9A002ABFFD /* AppDelegate.swift */,
 				82D3F81323573E9A002ABFFD /* LaunchScreenViewController.swift */,
+				82D3F83823576B74002ABFFD /* LoginViewController.swift */,
+				82D3F83E23577D00002ABFFD /* ContainerViewController.swift */,
+				82D3F83A23576DE1002ABFFD /* PlayListViewController.swift */,
 				82D3F81523573E9A002ABFFD /* Main.storyboard */,
 				82D3F81823573E9A002ABFFD /* Assets.xcassets */,
 				82D3F81A23573E9A002ABFFD /* LaunchScreen.storyboard */,
@@ -221,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D3F83B23576DE1002ABFFD /* PlayListViewController.swift in Sources */,
+				82D3F83923576B74002ABFFD /* LoginViewController.swift in Sources */,
 				82D3F81423573E9A002ABFFD /* LaunchScreenViewController.swift in Sources */,
 				82D3F81223573E9A002ABFFD /* AppDelegate.swift in Sources */,
+				82D3F83F23577D00002ABFFD /* ContainerViewController.swift in Sources */,
 				82D3F83723575779002ABFFD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +394,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = momoghimi.Spotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mydigipay.spotifytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/Spotify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -408,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = momoghimi.Spotify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mydigipay.spotifytest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Spotify/Spotify-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

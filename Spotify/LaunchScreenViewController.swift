@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpotifyLogin
 
 class LaunchScreenViewController: UIViewController {
     
@@ -27,20 +28,28 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        animateView()
+    }
+    
+    fileprivate func animateView() {
         UIView.animate(withDuration: 0.1) {
             self.containerView.center.y += UIScreen.main.bounds.height
         }
-        
         UIView.animate(withDuration: 1, delay: 1, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [], animations: {
             self.logo.center.y += UIScreen.main.bounds.height
         }) { (true) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                self.performSegue(withIdentifier: "next", sender: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+                self?.goToContainetr()
                 UIView.animate(withDuration: 1) {
-                    self.containerView.center.y -= UIScreen.main.bounds.height
+                    self?.containerView.center.y -= UIScreen.main.bounds.height
                 }
             })
         }
     }
+    
+    fileprivate func goToContainetr() {
+        self.performSegue(withIdentifier: "goToContainetr", sender: nil)
+    }
 }
+
 
