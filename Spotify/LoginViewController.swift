@@ -19,6 +19,11 @@ class LoginViewController: UIViewController {
         configButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     fileprivate func configButton() {
         let sptButton = SpotifyLoginButton(viewController: self, scopes: [.userReadTop, .playlistReadPrivate, .userLibraryRead])
         view.addSubview(sptButton)

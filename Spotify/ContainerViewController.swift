@@ -12,7 +12,7 @@ import SpotifyLogin
 class ContainerViewController: UIViewController {
 
     fileprivate lazy var loginViewController: LoginViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
         var viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.add(asChildViewController: viewController)
         
@@ -20,7 +20,7 @@ class ContainerViewController: UIViewController {
     }()
     
     fileprivate lazy var playListViewController: PlayListViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "PlayListViewController", bundle: nil)
         var viewController = storyboard.instantiateViewController(withIdentifier: "PlayListViewController") as! PlayListViewController
         self.add(asChildViewController: viewController)
         
