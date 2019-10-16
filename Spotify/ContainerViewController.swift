@@ -41,6 +41,7 @@ class ContainerViewController: UIViewController {
                 self!.add(asChildViewController: self!.loginViewController)
             }
             if error == nil, token != nil {
+                UserDefaults.standard.set(token, forKey: "accessToken")
                 self!.remove(asChildViewController: self!.loginViewController)
                 self!.add(asChildViewController: self!.playListViewController)
             }
