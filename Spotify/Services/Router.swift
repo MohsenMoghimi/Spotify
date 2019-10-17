@@ -10,7 +10,7 @@ import Foundation
 
 enum Router {
     
-    case getUserTopArtist
+    case getTracks
 }
 
 extension Router: URLRequestConvertible {
@@ -20,8 +20,8 @@ extension Router: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .getUserTopArtist:
-            return "v1/me/top/artists"
+        case .getTracks:
+            return "v1/tracks"
         }
     }
     
@@ -37,8 +37,8 @@ extension Router: URLRequestConvertible {
     
     var parameters: [String : String] {
         switch self {
-        default:
-            return [:]
+        case .getTracks:
+            return ["ids" : "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"]
         }
     }
     
