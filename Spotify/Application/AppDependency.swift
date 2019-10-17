@@ -14,11 +14,18 @@ protocol HasClientService: ServiceType {
     var client: APIClientType { get }
 }
 
-struct AppDependency: HasClientService {
+protocol HasSearchService: ServiceType {
+    var searchResulet: SearchServiceType { get }
+}
+
+struct AppDependency: HasClientService, HasSearchService {
+    
     let client: APIClientType
+    let searchResulet: SearchServiceType
     
     init() {
         client = APIClient()
+        searchResulet = SearchService(client)
     }
 }
 

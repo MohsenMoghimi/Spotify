@@ -24,13 +24,17 @@
 		82D3F8572357BF1A002ABFFD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F8562357BF1A002ABFFD /* ViewModel.swift */; };
 		82D3F85A2357BF75002ABFFD /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F8592357BF75002ABFFD /* AppDependency.swift */; };
 		82D3F85C2357C078002ABFFD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F85B2357C078002ABFFD /* Router.swift */; };
-		82D3F85E23584D0E002ABFFD /* TrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F85D23584D0E002ABFFD /* TrackService.swift */; };
+		82D3F85E23584D0E002ABFFD /* SearchTrackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F85D23584D0E002ABFFD /* SearchTrackService.swift */; };
 		82D3F8612358543C002ABFFD /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F8602358543C002ABFFD /* PlayListTableViewCell.swift */; };
 		82D3F86423585A33002ABFFD /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86323585A33002ABFFD /* Tracks.swift */; };
 		82D3F86623585A5B002ABFFD /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86523585A5B002ABFFD /* Items.swift */; };
 		82D3F86823585A82002ABFFD /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86723585A82002ABFFD /* Images.swift */; };
 		82D3F86A23585AAE002ABFFD /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86923585AAE002ABFFD /* Artists.swift */; };
 		82D3F86C23585ACA002ABFFD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86B23585ACA002ABFFD /* Album.swift */; };
+		82D3F86E23585D32002ABFFD /* PlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86D23585D32002ABFFD /* PlayListViewModel.swift */; };
+		82D3F87023586634002ABFFD /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F86F23586634002ABFFD /* SearchResponse.swift */; };
+		82D3F8722358BACC002ABFFD /* RetryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F8712358BACC002ABFFD /* RetryTableViewCell.swift */; };
+		82D3F8742358BC93002ABFFD /* NetworkErrorAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D3F8732358BC93002ABFFD /* NetworkErrorAware.swift */; };
 		9380BA8C7670E6E5531FE184 /* Pods_Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA59D41A03ECE78A85276FC /* Pods_Spotify.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,13 +60,17 @@
 		82D3F8562357BF1A002ABFFD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		82D3F8592357BF75002ABFFD /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		82D3F85B2357C078002ABFFD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		82D3F85D23584D0E002ABFFD /* TrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackService.swift; sourceTree = "<group>"; };
+		82D3F85D23584D0E002ABFFD /* SearchTrackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTrackService.swift; sourceTree = "<group>"; };
 		82D3F8602358543C002ABFFD /* PlayListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListTableViewCell.swift; sourceTree = "<group>"; };
 		82D3F86323585A33002ABFFD /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
 		82D3F86523585A5B002ABFFD /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		82D3F86723585A82002ABFFD /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		82D3F86923585AAE002ABFFD /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
 		82D3F86B23585ACA002ABFFD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		82D3F86D23585D32002ABFFD /* PlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModel.swift; sourceTree = "<group>"; };
+		82D3F86F23586634002ABFFD /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		82D3F8712358BACC002ABFFD /* RetryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryTableViewCell.swift; sourceTree = "<group>"; };
+		82D3F8732358BC93002ABFFD /* NetworkErrorAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAware.swift; sourceTree = "<group>"; };
 		A3247635A9FF525B929FD2A1 /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
 		EDA59D41A03ECE78A85276FC /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +160,7 @@
 				82D3F85F235853CC002ABFFD /* Cells */,
 				82D3F8482357B434002ABFFD /* PlayListViewController.swift */,
 				82D3F84A2357B450002ABFFD /* PlayListViewController.storyboard */,
+				82D3F86D23585D32002ABFFD /* PlayListViewModel.swift */,
 			);
 			path = PlayList;
 			sourceTree = "<group>";
@@ -168,7 +177,7 @@
 			children = (
 				82D3F8512357BDDB002ABFFD /* APIClient.swift */,
 				82D3F85B2357C078002ABFFD /* Router.swift */,
-				82D3F85D23584D0E002ABFFD /* TrackService.swift */,
+				82D3F85D23584D0E002ABFFD /* SearchTrackService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +187,7 @@
 			children = (
 				82D3F8562357BF1A002ABFFD /* ViewModel.swift */,
 				82D3F8542357BEDF002ABFFD /* URLRequestConvertible.swift */,
+				82D3F8732358BC93002ABFFD /* NetworkErrorAware.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -195,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				82D3F8602358543C002ABFFD /* PlayListTableViewCell.swift */,
+				82D3F8712358BACC002ABFFD /* RetryTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 				82D3F86723585A82002ABFFD /* Images.swift */,
 				82D3F86923585AAE002ABFFD /* Artists.swift */,
 				82D3F86B23585ACA002ABFFD /* Album.swift */,
+				82D3F86F23586634002ABFFD /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,10 +362,13 @@
 				82D3F86623585A5B002ABFFD /* Items.swift in Sources */,
 				82D3F84D2357B494002ABFFD /* LoginViewController.swift in Sources */,
 				82D3F8572357BF1A002ABFFD /* ViewModel.swift in Sources */,
-				82D3F85E23584D0E002ABFFD /* TrackService.swift in Sources */,
+				82D3F8722358BACC002ABFFD /* RetryTableViewCell.swift in Sources */,
+				82D3F85E23584D0E002ABFFD /* SearchTrackService.swift in Sources */,
 				82D3F86C23585ACA002ABFFD /* Album.swift in Sources */,
 				82D3F8522357BDDB002ABFFD /* APIClient.swift in Sources */,
+				82D3F8742358BC93002ABFFD /* NetworkErrorAware.swift in Sources */,
 				82D3F8492357B436002ABFFD /* PlayListViewController.swift in Sources */,
+				82D3F86E23585D32002ABFFD /* PlayListViewModel.swift in Sources */,
 				82D3F81423573E9A002ABFFD /* LaunchScreenViewController.swift in Sources */,
 				82D3F81223573E9A002ABFFD /* AppDelegate.swift in Sources */,
 				82D3F85A2357BF75002ABFFD /* AppDependency.swift in Sources */,
@@ -361,6 +376,7 @@
 				82D3F83723575779002ABFFD /* Constants.swift in Sources */,
 				82D3F86A23585AAE002ABFFD /* Artists.swift in Sources */,
 				82D3F8612358543C002ABFFD /* PlayListTableViewCell.swift in Sources */,
+				82D3F87023586634002ABFFD /* SearchResponse.swift in Sources */,
 				82D3F86823585A82002ABFFD /* Images.swift in Sources */,
 				82D3F8552357BEDF002ABFFD /* URLRequestConvertible.swift in Sources */,
 				82D3F86423585A33002ABFFD /* Tracks.swift in Sources */,

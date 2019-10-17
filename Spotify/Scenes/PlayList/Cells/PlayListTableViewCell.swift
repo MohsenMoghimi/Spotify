@@ -15,5 +15,16 @@ class PlayListTableViewCell: UITableViewCell {
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var albumArt: UIImageView!
     
-    
+    func config(model: Items) {
+        if let strName = model.name {
+            name.text = strName
+        }
+        if let strAlbum = model.album?.name {
+            album.text = strAlbum
+        }
+        if let artists = model.artists {
+            let artistsName = artists.map({$0.name!})
+            artist.text = artistsName.joined(separator: " - ")
+        }
+    }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 enum Router {
     
-    case getTracks
+    case searchTracks(title: String, offset: Int)
 }
 
 extension Router: URLRequestConvertible {
@@ -20,8 +20,8 @@ extension Router: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .getTracks:
-            return "v1/tracks"
+        case .searchTracks:
+            return "v1/search"
         }
     }
     
@@ -37,8 +37,13 @@ extension Router: URLRequestConvertible {
     
     var parameters: [String : String] {
         switch self {
-        case .getTracks:
-            return ["ids" : "7ouMYWpwJ422jRcDASZB7P,4VqPOruhp5EdPBeR92t6lQ,2takcwOaAZWiXQijPHIx7B"]
+        case .searchTracks(let title, let offset):
+            return [
+                "q" : "\(title)",
+                "limit" : "10",
+                "offset" : "\(offset)",
+                "type" :"track"
+            ]
         }
     }
     

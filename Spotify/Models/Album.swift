@@ -11,8 +11,6 @@ import Foundation
 struct Album : Codable {
     let total_tracks : Int?
     let artists : [Artists]?
-    let available_markets : [String]?
-    let release_date_precision : String?
     let images : [Images]?
     let name : String?
     let uri : String?
@@ -24,8 +22,6 @@ struct Album : Codable {
         
         case total_tracks = "total_tracks"
         case artists = "artists"
-        case available_markets = "available_markets"
-        case release_date_precision = "release_date_precision"
         case images = "images"
         case name = "name"
         case uri = "uri"
@@ -38,8 +34,6 @@ struct Album : Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         total_tracks = try values.decodeIfPresent(Int.self, forKey: .total_tracks)
         artists = try values.decodeIfPresent([Artists].self, forKey: .artists)
-        available_markets = try values.decodeIfPresent([String].self, forKey: .available_markets)
-        release_date_precision = try values.decodeIfPresent(String.self, forKey: .release_date_precision)
         images = try values.decodeIfPresent([Images].self, forKey: .images)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         uri = try values.decodeIfPresent(String.self, forKey: .uri)
