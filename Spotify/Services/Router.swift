@@ -64,7 +64,8 @@ extension Router: URLRequestConvertible {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.httpBody = bodyData
-        request.setValue(Constants.accessToken, forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        request.setValue("Bearer \(Constants.accessToken)", forHTTPHeaderField: "Authorization")
         
         return request
     }
