@@ -9,5 +9,6 @@ target 'Spotify' do
   pod 'SpotifyLogin'
   pod 'RxSwift',        '~> 4.0'
   pod 'RxCocoa',        '~> 4.0'
+  pod 'Kingfisher',     '~> 5.0'
 
 end

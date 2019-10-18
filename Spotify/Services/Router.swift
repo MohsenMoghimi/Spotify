@@ -40,7 +40,7 @@ extension Router: URLRequestConvertible {
         case .searchTracks(let title, let offset):
             return [
                 "q" : "\(title)",
-                "limit" : "10",
+                "limit" : "20",
                 "offset" : "\(offset)",
                 "type" :"track"
             ]

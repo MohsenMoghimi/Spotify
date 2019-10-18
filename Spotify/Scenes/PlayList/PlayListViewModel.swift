@@ -21,6 +21,6 @@ final class PlayListViewModel: ViewModel<HasSearchService> {
         self.offset = offset
         super.init()
         
-        searchResult = dependencies.searchResulet.performSearch(title: title, offset: offset).asObservable()
+        searchResult = dependencies.searchResulet.performSearch(title: title, offset: offset+20).asObservable()
     }
 }

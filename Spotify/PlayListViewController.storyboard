@@ -23,13 +23,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="H0L-X3-kas"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.1137254902" green="0.72549019609999998" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlC-Wz-1ul">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.72549019609999998" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.1137254902" green="0.72549019609999998" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="separatorInset" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayListTableViewCell" rowHeight="120" id="Ncx-6S-yje" customClass="PlayListTableViewCell" customModule="Spotify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
@@ -38,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-Yt-PMo">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="CYX-Yt-PMo">
                                                     <rect key="frame" x="296" y="11" width="98" height="98"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="98" id="MH0-G1-rFe"/>
@@ -46,7 +47,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="5"/>
+                                                            <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -77,14 +78,20 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-90-Ugd">
+                                                    <rect key="frame" x="335" y="50" width="20" height="20"/>
+                                                    <color key="color" red="0.1137254902" green="0.72549019609999998" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CYX-Yt-PMo" firstAttribute="centerY" secondItem="2Mn-no-trI" secondAttribute="centerY" id="AxH-NG-hzH"/>
                                                 <constraint firstItem="CYX-Yt-PMo" firstAttribute="leading" secondItem="dsg-DA-JsT" secondAttribute="trailing" constant="8" id="BJO-h0-CjI"/>
+                                                <constraint firstItem="bgU-90-Ugd" firstAttribute="centerY" secondItem="CYX-Yt-PMo" secondAttribute="centerY" id="MH3-2m-vf9"/>
                                                 <constraint firstItem="CYX-Yt-PMo" firstAttribute="trailing" secondItem="2Mn-no-trI" secondAttribute="trailingMargin" id="Phh-Zl-rrY"/>
                                                 <constraint firstItem="dsg-DA-JsT" firstAttribute="leading" secondItem="2Mn-no-trI" secondAttribute="leadingMargin" id="R85-go-N0N"/>
                                                 <constraint firstItem="yHc-MO-E3y" firstAttribute="top" secondItem="dsg-DA-JsT" secondAttribute="bottom" constant="4" id="Y1p-rG-78K"/>
                                                 <constraint firstItem="CYX-Yt-PMo" firstAttribute="leading" secondItem="yHc-MO-E3y" secondAttribute="trailing" constant="8" id="dpo-dJ-6UH"/>
+                                                <constraint firstItem="bgU-90-Ugd" firstAttribute="centerX" secondItem="CYX-Yt-PMo" secondAttribute="centerX" id="hsm-1R-LoU"/>
                                                 <constraint firstItem="JHQ-SO-qmk" firstAttribute="leading" secondItem="2Mn-no-trI" secondAttribute="leadingMargin" id="l6D-iK-d95"/>
                                                 <constraint firstItem="CYX-Yt-PMo" firstAttribute="leading" secondItem="JHQ-SO-qmk" secondAttribute="trailing" constant="8" id="lf4-ZT-oKN"/>
                                                 <constraint firstItem="dsg-DA-JsT" firstAttribute="centerY" secondItem="2Mn-no-trI" secondAttribute="centerY" id="rbM-ZW-0Yc"/>
@@ -97,6 +104,7 @@
                                             <outlet property="album" destination="dsg-DA-JsT" id="DG6-Je-o1F"/>
                                             <outlet property="albumArt" destination="CYX-Yt-PMo" id="Kzg-8p-mxs"/>
                                             <outlet property="artist" destination="yHc-MO-E3y" id="jdB-8F-fbj"/>
+                                            <outlet property="imageIndicator" destination="bgU-90-Ugd" id="Z6x-tI-b8G"/>
                                             <outlet property="name" destination="JHQ-SO-qmk" id="duL-QK-grz"/>
                                         </connections>
                                     </tableViewCell>
@@ -143,8 +151,8 @@
                         <constraints>
                             <constraint firstItem="IlC-Wz-1ul" firstAttribute="top" secondItem="6YM-zn-ukt" secondAttribute="bottom" id="Cin-4E-MCe"/>
                             <constraint firstItem="6YM-zn-ukt" firstAttribute="leading" secondItem="MY5-Ng-hvv" secondAttribute="leading" id="QnB-JE-wV1"/>
-                            <constraint firstItem="IlC-Wz-1ul" firstAttribute="bottom" secondItem="MY5-Ng-hvv" secondAttribute="bottom" id="aHC-bH-cWA"/>
                             <constraint firstItem="6YM-zn-ukt" firstAttribute="trailing" secondItem="MY5-Ng-hvv" secondAttribute="trailing" id="e8F-g1-hYx"/>
+                            <constraint firstAttribute="bottom" secondItem="IlC-Wz-1ul" secondAttribute="bottom" id="e8e-F7-v3F"/>
                             <constraint firstItem="IlC-Wz-1ul" firstAttribute="trailing" secondItem="MY5-Ng-hvv" secondAttribute="trailing" id="ein-xU-Eai"/>
                             <constraint firstItem="6YM-zn-ukt" firstAttribute="top" secondItem="MY5-Ng-hvv" secondAttribute="top" id="x70-kV-Ngd"/>
                             <constraint firstItem="IlC-Wz-1ul" firstAttribute="leading" secondItem="MY5-Ng-hvv" secondAttribute="leading" id="y8q-Ya-lAU"/>
@@ -180,6 +188,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="2400" height="2400"/>
+        <image name="placeholder" width="500" height="500"/>
     </resources>
 </document>

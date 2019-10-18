@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Kingfisher
 
 protocol SearcherDelegate {
     func performSearch()
@@ -20,11 +21,7 @@ class PlayListViewController: UIViewController {
     fileprivate var networkErrorAware: NetworkErrorAwareProtocol? = nil
     fileprivate var currenWaintingtMode: WaitingMode = .wait
     fileprivate var searchWasFailed = false
-    fileprivate var items = [Items]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    fileprivate var items = [Items]()
     
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet {
@@ -44,12 +41,15 @@ class PlayListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
+        KingfisherManager.shared.cache.memoryStorage.config.totalCostLimit = 10000
     }
     
     fileprivate func searchFor(text: String, currentTrack: Tracks?) {
         let viewModel = PlayListViewModel(title: text, offset: currentTrack?.offset ?? 0)
         viewModel.searchResult.subscribe({ [weak self] event in
             if event.error != nil {
+                guard let error = event.error else { return }
+                self?.showAlert(with: "Error", message: "\(error.localizedDescription)")
                 self?.networkErrorAware?.configure(mode: .retry)
                 self?.searchWasFailed = true
                 return
@@ -58,6 +58,7 @@ class PlayListViewController: UIViewController {
             self?.networkErrorAware?.configure(mode: .wait)
             self?.items.append(contentsOf: (dataSource.tracks?.items)!)
             self?.tracks = dataSource.tracks
+            self?.tableView.reloadData()
         }).disposed(by: bag)
     }
     
@@ -68,8 +69,9 @@ extension PlayListViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         tracks = nil
         items = [Items]()
-        tableView.reloadData()
+        networkErrorAware = nil
         performSearch()
+        tableView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
